@@ -186,13 +186,13 @@ retriveLmo(){
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="accessory" onChange={this.handleSearchArea}/>
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="accessories" onChange={this.handleSearchArea}/>
   <label class="form-check-label" for="exampleRadios2">
     Accessories
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="packing" onChange={this.handleSearchArea}/>
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="packings" onChange={this.handleSearchArea}/>
   <label class="form-check-label" for="exampleRadios3">
     Packing Materials
   </label>

@@ -37,8 +37,8 @@ export default class MatDis extends Component {
     });
   };
 
-    
-//search 
+
+  //search 
   filterData(factory, searchKey) {
     const result = factory.filter(
       (factory) =>
@@ -65,31 +65,25 @@ export default class MatDis extends Component {
         <div id="page-content-wrapper">
           <div className="container-fluid">
 
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark  rounded-3">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="/matdash">Dashboard</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href=""> &#62;Distribution Cards <span class="sr-only">(current)</span> </a>
+                  </li>
 
-
-
-          <nav class="navbar navbar-expand-lg navbar-dark bg-dark  rounded-3">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="/matdash">Dashboard</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href=""> &#62;Distribution Cards <span class="sr-only">(current)</span> </a>
-      </li>
-   
-    </ul>
-  </div>
-</nav> 
-    
-       
-
+                </ul>
+              </div>
+            </nav>
 
             <div className="row">
-             
+
               <div className=" col-lg-3 mt-2 mb-2">
                 <input
                   className="form-control"
@@ -99,35 +93,15 @@ export default class MatDis extends Component {
                   onChange={this.handleSearchArea}
                 ></input>
               </div>
-
-             
             </div>
 
-
-
-
-
             <div class="p-3 mb-2 bg-light text-dark rounded-3">
-
- 
-         
-            <div class="row">
+              <div class="row">
                 {this.state.factory.map((factory, index) => (
                   <div class="col-sm-4">
                     <div class="card" style={{ width: "18rem" }}>
-                      {/* <img
-                  src="%PUBLIC_URL%../../fut.png"
-                  width="400"
-                  height="400"
-                  class="card-img-top"
-                  alt="..."
-                /> */}
+                                            <div class="card-body bg-info rounded-3">
 
-
-
-
-                      <div class="card-body bg-info rounded-3">
-                        
                         <h5>No.0{index + 1}</h5>
                         <h6>Order ID:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{factory.orderid} </h6>
                         <h6>Product:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{factory.rawproduct} </h6>
@@ -139,7 +113,7 @@ export default class MatDis extends Component {
                         <h6>Quantity:{factory.matthreeqty} </h6>
                         <a
                           className="btn btn-warning"
-                         
+
                         >
                           <i className="fas fa-edit"></i>&nbsp;ACCEPT
                         </a>
@@ -157,89 +131,57 @@ export default class MatDis extends Component {
                   </div>
                 ))}
               </div>
-
-
-
-
-
-
-
-
-
-
-            
-           </div>
-           </div>
-           </div>
-
-
-
-
-
-           <div class="footer">
-      
-      
-      <div class="contain">
-      
-        <br/>
-      <div class="col">
-        <h1>ABOUT US</h1>
-      
-        
-        <ul>
-       
-          <li><i class="fas fa-phone-square"></i>&nbsp; &nbsp; Contact us</li>
-          <li><i class="fas fa-comment-alt"></i>&nbsp; &nbsp;Suggestion</li>
-          
-        </ul>
-        
-        
-      </div>
-      <div class="col">
-        <h1></h1>
-        <ul>
-          <li></li>
-        </ul>
-      </div>
-      <div class="col">
-      <div class="position-absolute top-50 start-50 translate-middle">
-      <br/>
-      
-      <img src="%PUBLIC_URL%../../white.jpg" class="rounded-circle" width="40" height="40"  alt=""/>
-        <h1>CASANOVA</h1>
-        
-        <ul>
-          <li>@ Copyright reserved</li>
-        </ul>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="col">
-        <h1></h1>
-        <ul>
-        </ul>
+
+        <div class="footer">
+          <div class="contain">
+            <br />
+            <div class="col">
+              <h1>ABOUT US</h1>
+              <ul>
+                <li><i class="fas fa-phone-square"></i>&nbsp; &nbsp; Contact us</li>
+                <li><i class="fas fa-comment-alt"></i>&nbsp; &nbsp;Suggestion</li>
+              </ul>
+            </div>
+            <div class="col">
+              <h1></h1>
+              <ul>
+                <li></li>
+              </ul>
+            </div>
+            <div class="col">
+              <div class="position-absolute top-50 start-50 translate-middle">
+                <br />
+                <img src="%PUBLIC_URL%../../white.jpg" class="rounded-circle" width="40" height="40" alt="" />
+                <h1>CASANOVA</h1>
+                <ul>
+                  <li>@ Copyright reserved</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col">
+              <h1></h1>
+              <ul>
+              </ul>
+            </div>
+
+            <div class="position-absolute top-50 end-0 translate-middle-y">
+              <div class="col social">
+                <h1>Help</h1>
+                <ul>
+                  <li><i class="fas fa-envelope"></i>&nbsp; &nbsp; <i class="fas fa-map-marker-alt"></i>&nbsp; &nbsp;<i class="fas fa-star"></i></li>
+                </ul>
+              </div>
+            </div>
+            <div class="clearfix">
+            </div>
+          </div>
         </div>
-      
-        <div class="position-absolute top-50 end-0 translate-middle-y">
-      <div class="col social">
-        <h1>Help</h1>
-        
-        <ul>
-        
-          <li><i class="fas fa-envelope"></i>&nbsp; &nbsp; <i class="fas fa-map-marker-alt"></i>&nbsp; &nbsp;<i class="fas fa-star"></i></li>
-          
-        </ul>
-        
-        </div>
-      </div>
-      <div class="clearfix">
-      
-      
-      </div>
-      </div>
+
       </div>
 
-           </div>        
-        
     );
   }
 }

@@ -80,7 +80,7 @@ export default class LmoMatEdit extends Component {
     //onsubmit method
     onSubmit =(e) =>{
         e.preventDefault();
-        const isValid= this.validate();
+        const isValid= true;
         const id =this.props.match.params.id;
 
         const {lmoID,matID,matName,qty,category,description} = this.state;
@@ -106,7 +106,6 @@ export default class LmoMatEdit extends Component {
                      lmoID:"",   
                      matID:"",
                      matName:"",
-                     
                      qty:"",
                      category:"",
                      description:""
