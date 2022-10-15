@@ -313,7 +313,6 @@ export default class EditPacking extends Component {
                     {this.state.categoryError}
                   </div>
                 </div>
-
                 <div className="form-group" style={{ marginBottom: "15px" }}>
                   <label style={{ marginBottom: "5px" }}>Payment</label>
                   <select name="payment" class="c-form-profession form-control" id="c-form-profession" value={this.state.payment} onChange={this.handleInputChange} >
