@@ -324,7 +324,6 @@ export default class EditPacking extends Component {
                     {this.state.paymentError}
                   </div>
                 </div>
-
                 <div className="form-group" style={{ marginBottom: "15px" }}>
                   <label style={{ marginBottom: "5px" }}>Quantity</label>
                   <input
